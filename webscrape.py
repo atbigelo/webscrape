@@ -19,4 +19,5 @@ colorqty = []
 colorqty.extend((blackqty, blueqty, grayqty, greenqty, orangeqty, redqty, silverqty, whiteqty))   
 print("The total number of GT-Rs listed for sale in the US: " + re.sub(r'<.+?>', '', str(totalqty)))
 for color in colorqty:
-    print(re.sub(r'<.+?>', '', str(color)))
+    color = re.sub(r'<.+?>', '', str(color).replace(" ", ""))
+    print(color)
